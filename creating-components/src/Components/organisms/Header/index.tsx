@@ -1,9 +1,30 @@
 import { Grid, Typography } from "@mui/material";
-import React from "react";
+import React, { useEffect } from "react";
 import Banner from "../../atoms/Banner";
 import Icon from "../../atoms/icons";
+import SearchBar from "../../molecules/SearchBar";
 
 function Header() {
+  var keyword = "";
+
+  const handleChange = () => {
+    // handle on change function
+    keyword = "";
+  };
+
+  useEffect(
+    () => {
+      // axios call to get the whole data
+
+      const search = () => {
+        // filter data
+      };
+    },
+    [
+      /* filtered data on variable keyword */
+    ]
+  );
+
   const handleExploreClick = () => {
     // Expand Explore tab
   };
@@ -24,6 +45,7 @@ function Header() {
       </Grid>
       <Grid item>
         <Icon imgSrc={""} />
+        <SearchBar onChange={handleChange} />
       </Grid>
       <Grid item>
         <div style={{ display: "flex" }}>
